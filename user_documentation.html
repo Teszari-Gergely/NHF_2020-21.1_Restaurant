@@ -1,0 +1,153 @@
+<html>
+<head><title>Jaser Éttermi szoftver</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+a:link {
+  color: #FF0000;
+}
+a:visited {
+  color: #000000;
+}
+a:hover {
+  color: #ADFF2F;
+}
+a:active {
+  color: #000000;
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+</head>
+<body background="https://wallpaperaccess.com/full/392777.jpg" alt="A háttér és a logo betöltéséhez csatlakozzon az internethez!">
+<table align="center" valign="middle" bgcolor="#B0C4DE" width="1080">
+<tr>
+<td><h1 align="middle">Jaser Éttermi szoftver</h1></td>
+</tr>
+<tr align="middle">
+<td><img alt="Jaser logo" width="128" height="128" src="https://lh3.googleusercontent.com/-8VE9i1ZKLfw/AAAAAAAAAAI/AAAAAAAAFxg/XD3wfx8QOcQ/s128-c0x00000000-cc-rp-mo/photo.jpg"></td>
+</tr>
+<tr height="100">
+<td width="200"><br><h2 align="middle">Felhasználói leírás</h2>
+<p align="middle">Üdvözlöm a Jaser Éttermi szoftver kezdőoldalán. Köszönöm, hogy igénybe veszi az általam fejlesztett szoftvert. A továbbiakban a program helyes installációját, használatát fogom bemutatni.</p><br></td>
+</tr>
+<tr>
+<td>
+<h3 align="middle">Installáció</h3>
+</td>
+</tr>
+<tr align="middle"><td>Ha ezt az oldalt olvassa, az azt jelenti, hogy a <b>.zip</b> fájlt sikeresen kicsomagolta.</li><br>
+<tr align="middle"><td><br>Ebben a tömörített mappában találja a program működéséhez szükséges <b>.py</b> fájlokat, valamint a program adatállományát, a <b>tables.txt</b>-t és a <b>menu.txt</b>-t  fájlját.<br><br>Ezeket a fájlokat tárolja egy helyen / mappában. Ha ezek a fájlok külön meghajtón / mappában / helyen vannak, a program nem tud megfelelően működni.</td></tr>
+<tr align="middle"><td><br>A program futtatásához szükséges telepíteni a Pythont. Ezt <a href="https://www.python.org/downloads/", target="_blank">itt</a> megteheti. </td><></tr>
+<tr align="middle"><td><br>A program indításához kattintson duplán a <b>NagyHazi_2020.py</b> fájlra.</td></tr>
+<tr align="middle">
+<td align="middle"><br><h3>A program használata:</h3>
+<p>A <b>NagyHazi.py</b> fájlra duplán kattintva a program üdvözlőképernyőjén egy logo rajz jelenik meg. Kettő másodperc múlva ez eltűnik, majd a program menüje fogad.</p>
+<p>A programot lehet kisképernyős módban is használni, minden, amire szükség van a vezérléséhez, az egy numerikus billentyűzet, leszámítva egy-két kivételes esetben. (ld. később) A programon belül a menüket az adott menüpont számának beírásával lehet vezérelni, az utasításokat az  <b>Enter</b> billenytűvel lehet jóváhagyni. Ezután a menü eltűnik a felületről, és megjelenik a választott menüpont felhasználói felülete, ahol menüpontonként eltérő bemenetet vár a program.</p>
+</td>
+</tr>
+<tr>
+<td>
+<br><p>A program lehetőséget ad:</p>
+<ul>
+	<li>Az asztalok terén:</li>
+	<ul>	
+	<li>Új asztal nyitására vendégek érkezése esetén</li>
+	<li>Foglaltsági térkép megjelenítésére, figyelembe véve az asztalok elhelyezkedését</li>
+	<li>Az asztalok módosítására: hány fős, szabad-e vagy foglalt, hol helyezkedik el az éttermen belül, új asztal hozzáadására, meglévő törlésére</li>
+	</ul>
+	<br><li>Az ételek terén:</li>
+	<ul>	
+	<li>Rendelések felvételére a menü alapján</li>
+	<li>Számla képernyőre való kiírására</li>
+	<li>Az étterem menüjének módosítására: ételek átnevezésére, újra árazására, új étel hozzáadására, meglévő törlésére</li>
+	</ul>
+</ul>
+</td>
+</tr>
+<tr align="middle">
+<td>
+<p><b>Asztalok megadása:</b> Ez az egyes menüpont. Itt, kiindulva a jelenlegi állapotból, betöltve érkezik a programba egy előre definiált elrendezés, ami a jelenlegi elhelyezése az asztaloknak. Ezt a <b>tables.txt</b> fájlból olvassa be a program. Adva vannak az asztalok, sorszámaikkal, férőhelyükkel, az, hogy éppen foglaltak vagy szabadok, elhelyezésük leírására pedig adott egy-egy X és Y koordinátája. <br><b>FIGYELEM!</b><br>A programnak nem dolga ellenőrizni, hogy az asztalok fedik-e egymást.<br>Az étterem téglalap alapú vendégterét tekintjük a "koordináta rendszernek", amelynek origója a vendégtér közepe. Az asztalok elrendezése természetesen később módosítható, az asztalok módosítása menüpont alatt.</p>
+<p><b>Asztalok nyitása:</b> Ezeket az asztalokat le lehet foglalni a vendégeknek, az asztalfoglalás menüponttal. Ilyenkor a program kilistázza a szabad asztalokat, azok sorszámát és férőhelyeit, és a sorszámot megadva foglalttá tehetjük az asztalt. Nem kötelező asztalt foglalni ahhoz, hogy rendelni lehessen, ha csak betér valaki az étterembe, a pincérek leültetik egy üres asztalhoz, felveszik a rendelését, és ezzel az asztal foglalttá válik.</p>
+<p><b>Asztalok helyének megjelenítése:</b> Amennyiben például több asztalt szeretnénk foglalni, lehetőség van az asztalokat grafikusan megjeleníteni is, a kettes menüpont alatt. Ilyenkor a láthatjuk, melyik asztal foglalt, hány fős asztalok szabadok, és figyelembe véve a vendég igényeit, (egymás közelében lévő asztaltokat szeretne, céges bulin a főnök külön szeretne ülni a beosztottaktól, stb) vizuálisan is lehet az asztalokat foglalni. Megnézzük az asztalok foglaltságát, és a grafikus felületet bezárva könnyebben tudunk a már említett asztalfogalás menüpont alatt asztalt foglalni. A grafikus felületen az asztalok színén látszik, hogy foglalt-e, bele számmal van írva, hány fős, továbbá az ablak egy téglalapot formáz, ebben a koordináták alapján el vannak helyezve az asztalok.</p>
+<p><b>Rendelés leadás:</b> Asztalokhoz társítva lehet rendelést leadni a konyha számára, a rendelés leadása menüpontban, ami a négyes menüpont. Ezeknél be kell írni az asztalt, a pincér által megadott ételek sorszámát, asztalonként értelemszerűen többet is, amiket aztán a program meg is jegyez, az asztalt pedig foglaltra állítja, ha addig nem volt az. Ha hibásan gépeljük be az étel nevét, vagy nem létező ételt adunk meg, a program figyelmeztet, és nem adja hozzá a megrendelt dolgok listájához. A rendelést fájlban tárolja el, az asztal számával elnevezett <b>.txt</b> fájlban. Itt tárolja a rendelt ételek neveit, azok áraival. Ha már korábban is rendeltek ettől az asztaltól, akkor hozzadja az új rendeléseket, ha nem, létrehozza a fájlt.</p>
+<p><b>Számla:</b> Ezt a fájlt olvassa be, ha a számla menüpontot (5) válasszuk. Itt a program bekéri az asztal számát, az ilyen névvel elnevezett <b>.txt</b> fájlt beolvassa, majd ha a rendelést fizették, utasításunkra törli a fájlt, az asztalt pedig szabadra állítja. Ha olyan asztalt adunk meg, amitől nem érkezett rendelés, vagy már fizették, a program figyelmeztet, hogy innen nincs fizetendő rendelés.</p>
+<p><b>Az étlap módosítása:</b> Itt is be van töltve egy előre definiált étlap, ahol meg van adva az étel / ital sorszáma, neve és az ára. Ezt tartalmazza a <b>menu.txt</b> Ezeket az ételeket a programban lehet törölni, hozzáadni új ételeket, a meglévők nevét és árát módosítani lehet.</p>
+</td>
+</tr>
+<tr align="middle">
+<td><br><h3>A futás eredménye</h3>
+<p>A programnak szüksége van egy menu.txt, egy tables.txt fájlokra, amikből a szükséges adatokat olvassa be, és szükség esetén módosítja is. Ezen fájlok nélkül is el tud indulni, de a menüpontok mindegyikéhez használja legalább az egyik fájlt, amiből dolgozik. Ha a fájlok nem léteznek, a program hibajelzést ad.</p>
+<p>További fájlokat is létrehoz, mint például a számlákat, ezeket azért hozza létre, hogy egy esetleges véletlen leállítás esetén is megjegyezze a rendeléseket. Ezeket magától képes törölni.</p>
+</td>
+</tr>
+<tr align="middle">
+<td>
+<br><h3>Információ</h3>
+<input type="button" value="Fájlkezelés" onMouseOver="confirm('A program adatállományait a program készítője nem javasolja a végfelhasználó által kézzel módosítani. Az összes lehetséges és értelmezett módosírást a program beépítve tartalmazza')">
+</td>
+</tr>
+<tr>
+<td align="middle"><br> <!-- A POPUP MENÜ A WWW.W3SCHOOLS.COM OLDALRÓL SZÁRMAZIK. -->
+<div class="popup" onclick="myFunction()">Copyright
+<span class="popuptext" id="myPopup">A program másolása tilos. A szoftvert a törvény védi. A program készítője minden jogot magának tart fenn. Tilos a program engedély nélküli többszörösítése, bérbeadása, kölcsönzése, a program nem nyílt forráskódú és szabadon nem terjeszthető. A programról egy biztonsági másolat készíthető.</span>
+</div> 2020 © Teszári Gergely. Minden jog fenntartva.</td>
+</tr>
+</tr>
+</table>
+<script>
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+</body>
+</html>
